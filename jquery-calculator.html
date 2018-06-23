@@ -117,11 +117,24 @@
       var firstNumber = 0;
       var secondNumber = 0;
       var tempNumber = "";
-      var operator;
+      var operator = "";
       var result = 0;
 
+      $('#button-equal').on('click', function () {
+        $('#result').html(calc());
+      });
 
-
+      $('#button-clear').on('click', function () {
+        firstNumber = 0;
+        secondNumber = 0;
+        tempNumber = "";
+        operator = "";
+        result = 0;
+        $('#result').html();
+        $('#first-number').html();
+        $('#operator').html();
+        $('#second-number').html();
+      });
     });
 
   </script>
