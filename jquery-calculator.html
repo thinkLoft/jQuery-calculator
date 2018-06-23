@@ -112,6 +112,21 @@
 
   <script type="text/javascript">
 
+    // getNumber function(
+    //  get value from onClicked button
+    //  store value as temporary variable
+    // )
+    //
+    // if user selects a number, add that number to the temporary variable (getNumber function)
+    // if the user selects an operator (operator function):
+    //  - Parse the temporary variable to a integer 
+    //  - and store into the first number 
+    //  - then save the operator the user selected
+    // Collect the second number (getNumber function)
+    // if the user selects equal, calculate store and display results (calc function)
+    // if the user selects another number, add that number to the temporary variable
+
+
     $(document).ready(function () {
       // Variable declarations
       var firstNumber = 0;
@@ -120,16 +135,21 @@
       var operator = "";
       var result = 0;
 
+      // Equal Button
       $('#button-equal').on('click', function () {
         $('#result').html(calc());
       });
 
+      // Clear Button
       $('#button-clear').on('click', function () {
+
+        //Resets all numbers and variables to original state
         firstNumber = 0;
         secondNumber = 0;
         tempNumber = "";
         operator = "";
         result = 0;
+        // Updates the HTML documents back to there original State
         $('#result').html();
         $('#first-number').html();
         $('#operator').html();
@@ -137,8 +157,7 @@
       });
     });
 
-    // Your code here...
-    // Parth's Coding Part
+    // get Number Function (Parth's Coding Part)
     $(".btn btn-primary number").on("click", function () {
 
       document.getElementById('#button-1 button-2 button-3 button-4 button-5 button-6 button-7 button-8 button-9 button-0').innerHTML = xhr.responseText;
